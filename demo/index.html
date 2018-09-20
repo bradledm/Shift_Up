@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type='text/css'>
+
+      #sidebar {
+        float:left;
+        background-color: green;
+        height: 100%;
+        width: 30%;
+      }
+
+      #content {
+        float:left;
+        background-color: red;
+        height: 100%;
+        width: 70%;
+      }
+  </style>
+</head>
+<body>
+  <h1>Stuff</h1>
+  <div id='sidebar'>
+  </div>
+
+  <div id='content'>
+  </div>
+
+  <script type='text/javascript'>
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "sidebar.html");
+
+    xhr.onreadystatechange = function(){
+      console.log(xhr.status);
+      if(xhr.readyState == 4){
+        console.log(xhr.response);
+
+        document.getElementById('sidebar').innerHTML = xhr.response;
+      }
+    }
+
+
+
+    function loadContent(contentID){
+      var xhr_content = new XMLHttpRequest();
+      xhr_content.open("GET", "content"+contentID+".html");
+
+      xhr_content.onreadystatechange = function(){
+        console.log(xhr_content.status);
+        if(xhr_content.readyState == 4){
+          console.log(xhr_content.response);
+
+          document.getElementById('content').innerHTML = xhr_content.response;
+        }
+      }
+    xhr_content.send();
+    }
+
+    loadContent(1);
+    xhr.send();
+
+  </script>
+</body>
+</html>

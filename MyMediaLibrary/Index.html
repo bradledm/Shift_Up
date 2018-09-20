@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Media Library</title>
+    
+<link rel="stylesheet" type="text/css" href="main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<style>
+
+* {box-sizing: border-box;}
+
+.input-container {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.icon {
+    padding: 10px;
+    background: darkred;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+}
+
+.input-field:focus {
+    border: 2px solid darkred;
+}
+
+/* Set a style for the submit button */
+.btn {
+    background-color: darkred;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.btn:hover {
+    opacity: 1;
+    
+</style>
+
+</head>
+  
+<body>
+    
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="eBooks.html">eBooks</a>
+    <a href="videogames.html">Gaming</a>
+    <ul style="list-style-type:none">
+        <li><a href="pc.html">PC</a></li>
+        <li><a href="consolegames.html">Gaming Console</a></li>
+    </ul>
+    <a href="movies.html">Movies</a>
+    <a href="music.html">Music</a>
+    <a href="pictures.html">Pictures</a>
+</div>
+
+
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+         
+    
+<div class="main">
+  <h1>My Media Library</h1>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+  
+  <!-- <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p> -->
+</div> 
+
+<form action="/action_page.php" style="max-width:500px;margin:auto">
+  <h2>Enter Song Information</h2>
+  <div class="input-container">
+    <i class="fa fa-music icon"></i>
+    <input class="input-field" type="text" placeholder="Song Title" name="songTitle">
+  </div>
+
+  <div class="input-container">
+    <i class="fa fa-music icon"></i>
+    <input class="input-field" type="text" placeholder="Artist" name="artist">
+  </div>
+  
+  <div class="input-container">
+    <i class="fa fa-music icon"></i>
+    <input class="input-field" type="text" placeholder="Album Name" name="albumName">
+  </div>
+
+  <div class="input-container">
+    <i class="fa fa-music icon"></i>
+    <input class="input-field" type="text" placeholder="Album Year" name="year">
+  </div>
+
+  <button type="submit" class="btn">Submit</button>
+</form>
+
+</body>
+
+</html>
